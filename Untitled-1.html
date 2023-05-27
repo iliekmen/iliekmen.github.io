@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Minecraft Command Tabs</title>
+  <style>
+    /* CSS styles... */
+
+    .copy-btn {
+      background-color: #666;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      padding: 5px 10px;
+      transition: 0.3s;
+      color: #fff;
+      font-size: 14px;
+      font-weight: bold;
+      border-radius: 5px;
+      margin-left: 10px;
+    }
+
+    .copy-btn:hover {
+      background-color: #888;
+    }
+  </style>
+  <script>
+    // JavaScript code...
+
+    function copyCommand(commandId) {
+      const commandElement = document.getElementById(commandId);
+      const command = '>' + commandElement.textContent || commandElement.innerText;
+      const textarea = document.createElement('textarea');
+      textarea.value = command;
+      document.body.appendChild(textarea);
+      textarea.select();
+      document.execCommand('copy');
+      document.body.removeChild(textarea);
+      alert('Command copied to clipboard!');
+    }
+  </script>
+</head>
+<body>
+  <div class="container">
+    <h2 style="text-align: center;">Minecraft Command Tabs</h2>
+
+    <div class="tab">
+      <button class="tablinks" onclick="openTab(event, 'tab1')">Commands</button>
+      <button class="tablinks" onclick="openTab(event, 'tab2')">Funny Commands</button>
+      <button class="tablinks" onclick="openTab(event, 'tab3')">Tab 3</button>
+    </div>
+
+    <div id="tab1" class="tabcontent" style="display:block;">
+      <h3>Commands</h3>
+      
+      <p><strong>Give Command:</strong></p>
+      <pre id="give-command">/give @p minecraft:diamond 64</pre>
+      <button class="copy-btn" onclick="copyCommand('give-command')">Copy</button>
+
+      <p><strong>Teleport Command:</strong></p>
+      <pre id="teleport-command">/tp @p 100 64 200</pre>
+      <button class="copy-btn" onclick="copyCommand('teleport-command')">Copy</button>
+
+      <p><strong>Summon Command:</strong></p>
+      <pre id="summon-command">/summon minecraft:creeper</pre>
+      <button class="copy-btn" onclick="copyCommand('summon-command')">Copy</button>
+
+      <!-- More commands... -->
+    </div>
+  </div>
+</body>
+</html>
