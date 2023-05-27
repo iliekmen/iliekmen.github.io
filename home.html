@@ -85,7 +85,20 @@
       font-family: "Courier New", monospace;
       font-size: 14px;
     }
+
+    .mouse-trail {
+      position: fixed;
+      width: 10px;
+      height: 10px;
+      background-color: red;
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 9999;
+    }
   </style>
+  </head>
+  <body>
+    <div id="mouse-trail-container"></div>
   <script>
     function openTab(event, tabName) {
       var i, tabcontent, tablinks;
@@ -100,6 +113,26 @@
       document.getElementById(tabName).style.display = "block";
       event.currentTarget.className += " active";
     }
+
+    document.addEventListener('mousemove', function(e) {
+      var trail = document.createElement('div');
+      trail.className = 'mouse-trail';
+      trail.style.left = (e.clientX - 5) + 'px';
+      trail.style.top = (e.clientY - 5) + 'px';
+      document.getElementById('mouse-trail-container').appendChild(trail);
+
+      var opacity = 1;
+      var fadeInterval = setInterval(function() {
+        if (opacity <= 0) {
+          clearInterval(fadeInterval);
+          trail.remove();
+        } else {
+          opacity -= 0.03;
+          trail.style.opacity = opacity;
+        }
+      }, 10);
+    });
+
   </script>
 </head>
 <body>
@@ -109,7 +142,7 @@
     <div class="tab">
       <button class="tablinks" onclick="openTab(event, 'tab1')">Commands</button>
       <button class="tablinks" onclick="openTab(event, 'tab2')">Funny Commands</button>
-      <button class="tablinks" onclick="openTab(event, 'tab3')">Tab 3</button>
+      <button class="tablinks" onclick="openTab(event, 'tab3')">hitsync song</button>
     </div>
 
     <div id="tab1" class="tabcontent" style="display:block;">
@@ -202,33 +235,32 @@
         <pre>/summon minecraft:villager ~ ~ ~ {CustomNameVisible:1,CustomName:'{"text":"John","color":"green"}',Offers:{Recipes:[{buy:{id:"minecraft:emerald",Count:1},sell:{id:"minecraft:diamond",Count:1},rewardExp:false}]}}</pre>
         <pre>/summon minecraft:chicken ~ ~ ~ {CustomNameVisible:1,CustomName:'{"text":"Giant Chicken"}',NoAI:1b,Size:20}</pre>
 
-  <p><strong>Make Players Ride Pigs:</strong></p>
-  <pre>/execute as @a run tp @s ~ ~ ~ facing @e[type=pig,limit=1]</pre>
+        <p><strong>Make Players Ride Pigs:</strong></p>
+        <pre>/execute as @a run tp @s ~ ~ ~ facing @e[type=pig,limit=1]</pre>
+      
+        <p><strong>Spawn a Flying Cow:</strong></p>
+        <pre>/summon minecraft:cow ~ ~ ~ {CustomNameVisible:1,CustomName:'{"text":"Flying Cow"}',NoAI:1b,Tags:["flying"]}</pre>
+      
+        <p><strong>Turn Players into Exploding TNT:</strong></p>
+        <pre>/effect @a minecraft:resistance 99999 255 true<br>/effect @a minecraft:levitation 99999 255 true<br>/execute as @a at @s run summon minecraft:tnt ~ ~ ~ {Fuse:1,Tags:["exploding_tnt"]}</pre>
+      
+        <p><strong>Spawn a Parrot Disco:</strong></p>
+        <pre>/summon minecraft:parrot ~ ~ ~ {CustomNameVisible:1,CustomName:'{"text":"Disco Parrot"}',NoAI:1b,ActiveEffects:[{Id:14,Duration:99999,Amplifier:1,ShowParticles:0b}]}</pre>
+      
+        <p><strong>Give Players a Party Hat:</strong></p>
+        <pre>/give @a minecraft:leather_helmet{display:{Name:'{"text":"Party Hat","color":"yellow"}'},Enchantments:[{id:"minecraft:protection",lvl:32767}]} 1</pre>
+      
+        <p><strong>Summon a Dancing Armor Stand:</strong></p>
+        <pre>/summon minecraft:armor_stand ~ ~ ~ {Invisible:1b,Invulnerable:1b,DisabledSlots:2039583,ShowArms:1b,NoBasePlate:1b,ArmorItems:[{},{},{},{id:"minecraft:note_block",Count:1b}]}</pre>
+      
+        <p><strong>Turn Everyone into Bouncing Slime Blocks:</strong></p>
+        <pre>/effect @a minecraft:jump_boost 9999 128 true</pre>
+      
+        <p><strong>Spawn a Mob with a Shulker Shell Head:</strong></p>
+        <pre>/summon minecraft:zombie ~ ~ ~ {CustomNameVisible:1,CustomName:'{"text":"Shulker Head Zombie"}',ArmorItems:[{},{},{},{id:"minecraft:shulker_shell",Count:1b,tag:{display:{Name:'{"text":"Shulker Shell Head"}'}}}]}</pre>
+      
+        <p><strong>Make Players Float in the Air:</strong></p>
+        <pre>/effect @a minecraft:levitation 9999 5 true</pre>
+        <div
 
-  <p><strong>Spawn a Flying Cow:</strong></p>
-  <pre>/summon minecraft:cow ~ ~ ~ {CustomNameVisible:1,CustomName:'{"text":"Flying Cow"}',NoAI:1b,Tags:["flying"]}</pre>
-
-  <p><strong>Turn Players into Exploding TNT:</strong></p>
-  <pre>/effect @a minecraft:resistance 99999 255 true<br>/effect @a minecraft:levitation 99999 255 true<br>/execute as @a at @s run summon minecraft:tnt ~ ~ ~ {Fuse:1,Tags:["exploding_tnt"]}</pre>
-
-  <p><strong>Spawn a Parrot Disco:</strong></p>
-  <pre>/summon minecraft:parrot ~ ~ ~ {CustomNameVisible:1,CustomName:'{"text":"Disco Parrot"}',NoAI:1b,ActiveEffects:[{Id:14,Duration:99999,Amplifier:1,ShowParticles:0b}]}</pre>
-
-  <p><strong>Give Players a Party Hat:</strong></p>
-  <pre>/give @a minecraft:leather_helmet{display:{Name:'{"text":"Party Hat","color":"yellow"}'},Enchantments:[{id:"minecraft:protection",lvl:32767}]} 1</pre>
-
-  <p><strong>Summon a Dancing Armor Stand:</strong></p>
-  <pre>/summon minecraft:armor_stand ~ ~ ~ {Invisible:1b,Invulnerable:1b,DisabledSlots:2039583,ShowArms:1b,NoBasePlate:1b,ArmorItems:[{},{},{},{id:"minecraft:note_block",Count:1b}]}</pre>
-
-  <p><strong>Turn Everyone into Bouncing Slime Blocks:</strong></p>
-  <pre>/effect @a minecraft:jump_boost 9999 128 true</pre>
-
-  <p><strong>Spawn a Mob with a Shulker Shell Head:</strong></p>
-  <pre>/summon minecraft:zombie ~ ~ ~ {CustomNameVisible:1,CustomName:'{"text":"Shulker Head Zombie"}',ArmorItems:[{},{},{},{id:"minecraft:shulker_shell",Count:1b,tag:{display:{Name:'{"text":"Shulker Shell Head"}'}}}]}</pre>
-
-  <p><strong>Make Players Float in the Air:</strong></p>
-  <pre>/effect @a minecraft:levitation 9999 5 true</pre>
-</div>
-
-      </div>
       
