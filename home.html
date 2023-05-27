@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Minecraft Command list</title>
+  <style>
+    body {
+      background-image: url("https://cdn.shopify.com/s/files/1/1061/1924/products/Nerd_with_Glasses_Emoji_2a8485bc-f136-4156-9af6-297d8522d8d1_large.png?v=1571606036");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-color: #000;
+      color: #fff;
+      font-family: "Courier New", monospace;
+      margin: 0;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .tab {
+      overflow: hidden;
+      background-color: #222;
+      border-radius: 5px;
+      margin-bottom: 20px;
+    }
+
+    .tab button {
+      background-color: #666;
+      float: left;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      padding: 10px 20px;
+      transition: 0.3s;
+      color: #fff;
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+    .tab button:hover {
+      background-color: #888;
+    }
+
+    .tab button.active {
+      background-color: #ccc;
+    }
+
+    .tabcontent {
+      display: none;
+      padding: 20px;
+      border-radius: 5px;
+      background-color: #333;
+      margin-top: 10px;
+      animation: fadeIn 0.5s;
+    }
+
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+
+    h3 {
+      margin-top: 0;
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      margin: 0;
+      margin-bottom: 10px;
+      font-size: 16px;
+    }
+
+    pre {
+      background-color: #444;
+      padding: 10px;
+      border-radius: 5px;
+      overflow-x: auto;
+      font-family: "Courier New", monospace;
+      font-size: 14px;
+    }
+  </style>
+  <script>
+    function openTab(event, tabName) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablinks");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
+      document.getElementById(tabName).style.display = "block";
+      event.currentTarget.className += " active";
+    }
+  </script>
+</head>
+<body>
+  <div class="container">
+    <h2 style="text-align: center;">Minecraft Command Tabs</h2>
+
+    <div class="tab">
+      <button class="tablinks" onclick="openTab(event, 'tab1')">Commands</button>
+      <button class="tablinks" onclick="openTab(event, 'tab2')">Funny Commands</button>
+      <button class="tablinks" onclick="openTab(event, 'tab3')">Tab 3</button>
+    </div>
+
+    <div id="tab1" class="tabcontent" style="display:block;">
+      <h3>Commands</h3>
+      <p><strong>Give Command:</strong></p>
+      <pre>/give @p minecraft:diamond 64</pre>
+    
+      <p><strong>Teleport Command:</strong></p>
+      <pre>/tp @p 100 64 200</pre>
+    
+      <p><strong>Summon Command:</strong></p>
+      <pre>/summon minecraft:creeper</pre>
+    
+      <p><strong>Weather Command:</strong></p>
+      <pre>/weather clear</pre>
+    
+      <p><strong>Time Set Command:</strong></p>
+      <pre>/time set day</pre>
+    
+      <p><strong>Gamemode Command:</strong></p>
+      <pre>/gamemode survival @a</pre>
+    
+      <p><strong>Kill Command:</strong></p>
+      <pre>/kill @e[type=!minecraft:player]</pre>
+    
+      <p><strong>Effect Command:</strong></p>
+      <pre>/effect @a minecraft:speed 60 5</pre>
+    
+      <p><strong>Fill Command:</strong></p>
+      <pre>/fill 0 64 0 10 70 10 minecraft:stone</pre>
+    
+      <p><strong>Execute Command:</strong></p>
+      <pre>/execute as @a at @s run say Hello, Minecrafters!</pre>
+    
+      <p><strong>Enchant Command:</strong></p>
+      <pre>/enchant @p minecraft:sharpness 5</pre>
+    
+      <p><strong>Scoreboard Command:</strong></p>
+      <pre>/scoreboard objectives add kills playerKillCount</pre>
+    
+      <p><strong>Tellraw Command:</strong></p>
+      <pre>/tellraw @a {"text":"Welcome to the server!","color":"yellow"}</pre>
+    
+      <p><strong>Setblock Command:</strong></p>
+      <pre>/setblock 10 64 10 minecraft:redstone_block</pre>
+    
+      <p><strong>Execute at Entities Command:</strong></p>
+      <pre>/execute as @e[type=skeleton] at @s run summon minecraft:zombie</pre>
+    
+      <p><strong>Spread Players Command:</strong></p>
+      <pre>/spreadplayers 0 0 100 100 true @a</pre>
+    
+      <p><strong>Give Custom Named Item Command:</strong></p>
+      <pre>/give @p minecraft:diamond_sword{display:{Name:'{"text":"Legendary Sword"}'}} 1</pre>
+    
+      <p><strong>Execute if Block Command:</strong></p>
+      <pre>/execute if block 0 64 0 minecraft:diamond_block run say Found a diamond block!</pre>
+    </div>
+
+    <div id="tab2" class="tabcontent">
+        <h3>Funny Commands</h3>
+        <p><strong>Spawn a Dancing Enderman:</strong></p>
+        <pre>/summon minecraft:enderman ~ ~ ~ {CustomNameVisible:1,CustomName:'{"text":"Disco Enderman"}',NoAI:1b,ActiveEffects:[{Id:14,Duration:99999,Amplifier:1,ShowParticles:0b}]}</pre>
+      
+        <p><strong>Turn Everyone into Slime Blocks:</strong></p>
+        <pre>/effect @a minecraft:levitation 9999 128 true</pre>
+      
+        <p><strong>Summon a Mob Band:</strong></p>
+        <pre>/summon minecraft:zombie ~ ~ ~ {CustomNameVisible:1,CustomName:'{"text":"Zombie Guitarist"}',HandItems:[{id:"minecraft:diamond_sword",Count:1b},{id:"minecraft:note_block",Count:1b}],ArmorItems:[{id:"minecraft:leather_boots",Count:1b},{id:"minecraft:leather_leggings",Count:1b},{id:"minecraft:leather_chestplate",Count:1b},{id:"minecraft:leather_helmet",Count:1b}]}</pre>
+      
+        <p><strong>Turn All Blocks into Cake:</strong></p>
+        <pre>/fill ~-10 ~-10 ~-10 ~10 ~10 ~10 minecraft:cake</pre>
+      
+        <p><strong>Launch Players with Explosive Knockback:</strong></p>
+        <pre>/execute as @a at @s run tp @s ~ ~5 ~</pre>
+
+        <p><strong>Summon Exploding Sheep:</strong></p>
+        <pre>/summon minecraft:sheep ~ ~ ~ {Fuse:0}</pre>
+      
+        <p><strong>Make Everyone Dance:</strong></p>
+        <pre>/effect @a minecraft:jump_boost 9999 10</pre>
+      
+        <p><strong>Spawn a Mob with a Giant Head:</strong></p>
+        <pre>/summon minecraft:zombie ~ ~ ~ {CustomNameVisible:1,CustomName:'{"text":"Bob"}',ArmorItems:[{},{},{},{id:"minecraft:player_head",Count:1b,tag:{display:{Name:'{"text":"Giant Head"}'}}}])}</pre>
+      
+        <p><strong>Make Chat Messages Upside Down:</strong></p>
+        <pre>/tellraw @a {"text":"Hello World!","color":"yellow","bold":true,"italic":true,"underlined":true,"strikethrough":true,"obfuscated":true}</pre>
+      
+        <p><strong>Spawn a Talking Villager:</strong></p>
+        <pre>/summon minecraft:villager ~ ~ ~ {CustomNameVisible:1,CustomName:'{"text":"John","color":"green"}',Offers:{Recipes:[{buy:{id:"minecraft:emerald",Count:1},sell:{id:"minecraft:diamond",Count:1},rewardExp:false}]}}</pre>
+        <pre>/summon minecraft:chicken ~ ~ ~ {CustomNameVisible:1,CustomName:'{"text":"Giant Chicken"}',NoAI:1b,Size:20}</pre>
+
+  <p><strong>Make Players Ride Pigs:</strong></p>
+  <pre>/execute as @a run tp @s ~ ~ ~ facing @e[type=pig,limit=1]</pre>
+
+  <p><strong>Spawn a Flying Cow:</strong></p>
+  <pre>/summon minecraft:cow ~ ~ ~ {CustomNameVisible:1,CustomName:'{"text":"Flying Cow"}',NoAI:1b,Tags:["flying"]}</pre>
+
+  <p><strong>Turn Players into Exploding TNT:</strong></p>
+  <pre>/effect @a minecraft:resistance 99999 255 true<br>/effect @a minecraft:levitation 99999 255 true<br>/execute as @a at @s run summon minecraft:tnt ~ ~ ~ {Fuse:1,Tags:["exploding_tnt"]}</pre>
+
+  <p><strong>Spawn a Parrot Disco:</strong></p>
+  <pre>/summon minecraft:parrot ~ ~ ~ {CustomNameVisible:1,CustomName:'{"text":"Disco Parrot"}',NoAI:1b,ActiveEffects:[{Id:14,Duration:99999,Amplifier:1,ShowParticles:0b}]}</pre>
+
+  <p><strong>Give Players a Party Hat:</strong></p>
+  <pre>/give @a minecraft:leather_helmet{display:{Name:'{"text":"Party Hat","color":"yellow"}'},Enchantments:[{id:"minecraft:protection",lvl:32767}]} 1</pre>
+
+  <p><strong>Summon a Dancing Armor Stand:</strong></p>
+  <pre>/summon minecraft:armor_stand ~ ~ ~ {Invisible:1b,Invulnerable:1b,DisabledSlots:2039583,ShowArms:1b,NoBasePlate:1b,ArmorItems:[{},{},{},{id:"minecraft:note_block",Count:1b}]}</pre>
+
+  <p><strong>Turn Everyone into Bouncing Slime Blocks:</strong></p>
+  <pre>/effect @a minecraft:jump_boost 9999 128 true</pre>
+
+  <p><strong>Spawn a Mob with a Shulker Shell Head:</strong></p>
+  <pre>/summon minecraft:zombie ~ ~ ~ {CustomNameVisible:1,CustomName:'{"text":"Shulker Head Zombie"}',ArmorItems:[{},{},{},{id:"minecraft:shulker_shell",Count:1b,tag:{display:{Name:'{"text":"Shulker Shell Head"}'}}}]}</pre>
+
+  <p><strong>Make Players Float in the Air:</strong></p>
+  <pre>/effect @a minecraft:levitation 9999 5 true</pre>
+</div>
+
+      </div>
+      
