@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Clicker Game</title>
+  <style>
+    .button {
+      padding: 10px 20px;
+      background-color: #555555;
+      color: #ffffff;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    
+    .button:hover {
+      background-color: #008000;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      -webkit-user-select: none; /* Disable text selection on WebKit browsers */
+      -moz-user-select: none; /* Disable text selection on Mozilla Firefox */
+      -ms-user-select: none; /* Disable text selection on Microsoft Edge */
+      user-select: none; /* Disable text selection on other browsers */
+      background-color: #ffffff; /* Set default background color */
+    }
+
+    body.dark-mode {
+      background-color: #333333; /* Set background color for dark mode */
+      color: #ffffff; /* Set text color for dark mode */
+    }
+
+    h1 {
+      color: #ff0000;
+    }
+    
+    #counter {
+      font-size: 48px;
+      color: #0000ff;
+      margin-bottom: 20px;
+    }
+    
+    #click-button {
+      padding: 10px 20px;
+      background-color: #000000;
+      color: #ffffff;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    
+    #click-button:hover {
+      background-color: #008000;
+    }
+    
+    #settings-button {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+    }
+    
+    .settings-container {
+      display: none;
+      margin-top: 20px;
+    }
+    
+    .theme-option {
+      margin-bottom: 10px;
+    }
+    
+    .theme-option label {
+      font-weight: bold;
+      margin-right: 10px;
+    }
+  </style>
+</head>
+<body>
+  <button id="settings-button" class="button" onclick="toggleSettings()">Settings</button>
+  <button class="button" onclick="redirectToLink()">Do you want to add the sound? Click me!</button>
+  <h1>Clicker Game</h1>
+  <p id="counter">0</p>
+  
+  <div id="settings-container" class="settings-container">
+    <div class="theme-option">
+      <label for="theme-select">Theme:</label>
+      <select id="theme-select" onchange="changeTheme()">
+        <option value="light">Light Mode</option>
+        <option value="dark">Dark Mode</option>
+      </select>
+    </div>
+  </div>
+  
+  <script>
+    function redirectToLink() {
+      window.location.href = "https://drive.google.com/uc?export=download&id=1DmzrOY71nJL8hHp9EQts7yBTiCpg5v-V"; // Replace with the desired link
+    }
+
+    var counterElement = document.getElementById("counter");
+    var counter = localStorage.getItem("clickerCounter");
+    if (counter) {
+      counter = parseInt(counter);
+    } else {
+      counter = 0;
+    }
+    counterElement.textContent = counter;
+    
+    document.addEventListener("click", incrementCounter);
+    document.addEventListener("keydown", incrementCounter);
+    
+    function incrementCounter(event) {
+      counter++;
+      counterElement.textContent = counter;
+      playClickSound();
+      
+      localStorage.setItem("clickerCounter", counter);
+    }
+    
+    function playClickSound() {
+      var clickSound = new Audio("click_sound.mp3");
+      clickSound.currentTime = 0;
+      clickSound.play();
+    }
+    
+    // Disable right-click context menu
+    document.addEventListener("contextmenu", function(event) {
+      event.preventDefault();
+    });
+    
+    function toggleSettings() {
+      var settingsContainer = document.getElementById("settings-container");
+      if (settingsContainer.style.display === "none") {
+        settingsContainer.style.display = "block";
+      } else {
+        settingsContainer.style.display = "none";
+      }
+    }
+    
+    function changeTheme() {
+      var themeSelect = document.getElementById("theme-select");
+      var body = document.getElementsByTagName("body")[0];
+      
+      if (themeSelect.value === "dark") {
+        body.classList.add("dark-mode");
+      } else {
+        body.classList.remove("dark-mode");
+      }
+    }
+  </script>
+</body>
+</html>
