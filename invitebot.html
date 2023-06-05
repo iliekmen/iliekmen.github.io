@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Invite Bot</title>
+    <style>
+        body {
+            background-color: #282c34;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        
+        .container {
+            text-align: center;
+        }
+        
+        .button {
+            background-color: #61dafb;
+            color: #282c34;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 18px;
+            border: none;
+            outline: none;
+            cursor: pointer;
+        }
+        
+        .button:hover {
+            background-color: #5bc0de;
+        }
+        
+        .button.dark-mode {
+            background-color: #282c34;
+            color: #61dafb;
+        }
+        
+        .button.dark-mode:hover {
+            background-color: #22262d;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="https://example.com" target="_blank" rel="noopener noreferrer">
+            <button class="button">INVITE BOT!</button>
+        </a>
+    </div>
+
+    <script>
+        const button = document.querySelector('.button');
+
+        button.addEventListener('click', () => {
+            // You can add additional logic here if needed
+            console.log('Bot invited!');
+        });
+    </script>
+</body>
+</html>
