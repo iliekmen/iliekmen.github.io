@@ -1,0 +1,56 @@
+HTTrack3.49-2+htsswf+htsjava launched on Sun, 13 Aug 2023 00:41:48 at https://web.roblox.com/ +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar
+(winhttrack -qYC2%Ps2u1%s%uN0%I0p3DaK0H0%kf2A25000%f#f -F "Mozilla/4.5 (compatible; HTTrack 3.0x; Windows 98)" -%F "<!-- Mirrored from %s%s by HTTrack Website Copier/3.x [XR&CO'2014], %s -->" -%l "en, *" -Y https://web.roblox.com/ -O1 "C:\Users\james bonds123\Downloads\New folder (5)\RobloxV2" +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+00:41:49	Warning: 	Found for https://web.roblox.com/
+00:41:49	Warning: 	File has moved from https://web.roblox.com/ to https://www.roblox.com/
+00:42:46	Error: 	"Not Found" (404) at link https://www.roblox.com/GET (from https://www.roblox.com/)
+00:42:46	Error: 	"Not Found" (404) at link https://www.roblox.com/POST (from https://www.roblox.com/)
+00:42:48	Error: 	"Bad Request" (400) at link https://ecsv2.roblox.com/www/e.png (from https://www.roblox.com/)
+00:42:48	Error: 	"Not Found" (404) at link https://www.roblox.com/client-status/set (from https://www.roblox.com/)
+00:42:59	Error: 	"Not Found" (404) at link https://www.roblox.com/navigation/userdata (from https://www.roblox.com/)
+00:42:59	Error: 	"Not Found" (404) at link https://www.roblox.com/chat/chat (from https://www.roblox.com/)
+00:42:59	Error: 	"Not Found" (404) at link https://www.roblox.com/chat/data (from https://www.roblox.com/)
+00:42:59	Error: 	"Not Found" (404) at link https://www.roblox.com/friends/list (from https://www.roblox.com/)
+00:42:59	Error: 	"Not Found" (404) at link https://www.roblox.com/navigation/getCount (from https://www.roblox.com/)
+00:43:03	Error: 	"Not Found" (404) at link https://www.roblox.com/avatar-thumbnail-3d/json (from https://www.roblox.com/)
+00:43:03	Error: 	"Not Found" (404) at link https://www.roblox.com/avatar-thumbnail/image (from https://www.roblox.com/)
+00:43:03	Error: 	"Not Found" (404) at link https://www.roblox.com/avatar-thumbnail/json (from https://www.roblox.com/)
+00:43:03	Error: 	"Bad Request" (400) at link https://www.roblox.com/request-error?id=ec78a926-07a7-4d3d-86b8-19c4f56ce3f5&mode=&code= (from https://www.roblox.com/)
+00:43:03	Error: 	"Not Found" (404) at link https://www.roblox.com/avatar/request-thumbnail-fix (from https://www.roblox.com/)
+00:43:03	Error: 	"Not Found" (404) at link https://www.roblox.com/bust-thumbnail/json (from https://www.roblox.com/)
+00:43:03	Error: 	"Not Found" (404) at link https://www.roblox.com/headshot-thumbnail/json (from https://www.roblox.com/)
+00:43:03	Error: 	"Bad Request" (400) at link https://www.roblox.com/request-error?id=62f21fb4-80ed-4b4b-a7f5-1b5763d56230&mode=&code= (from https://www.roblox.com/)
+00:43:03	Error: 	"Not Found" (404) at link https://www.roblox.com/outfit-thumbnail/json (from https://www.roblox.com/)
+00:43:03	Error: 	"Not Found" (404) at link https://www.roblox.com/place-thumbnails (from https://www.roblox.com/)
+00:43:03	Error: 	"Not Found" (404) at link https://www.roblox.com/thumbnail/asset/ (from https://www.roblox.com/)
+00:43:03	Error: 	"Not Found" (404) at link https://www.roblox.com/thumbnail/avatar-headshot (from https://www.roblox.com/)
+00:43:03	Error: 	"Not Found" (404) at link https://www.roblox.com/thumbnail/avatar-headshots (from https://www.roblox.com/)
+00:43:03	Error: 	"Not Found" (404) at link https://www.roblox.com/thumbnail/user-avatar (from https://www.roblox.com/)
+00:43:03	Error: 	"Not Found" (404) at link https://www.roblox.com/thumbnail/resolve-hash (from https://www.roblox.com/)
+00:43:03	Error: 	"Not Found" (404) at link https://www.roblox.com/thumbnail/place (from https://www.roblox.com/)
+00:43:03	Error: 	"Not Found" (404) at link https://www.roblox.com/thumbnail/get-asset-media (from https://www.roblox.com/)
+00:43:03	Error: 	"Not Found" (404) at link https://www.roblox.com/thumbnail/remove-asset-media (from https://www.roblox.com/)
+00:43:03	Error: 	"Not Found" (404) at link https://www.roblox.com/thumbnail/set-asset-media-sort-order (from https://www.roblox.com/)
+00:43:03	Error: 	"Bad Request" (400) at link https://www.roblox.com/thumbnail/place-thumbnails (from https://www.roblox.com/)
+00:43:03	Error: 	"Not Found" (404) at link https://www.roblox.com/thumbnail/place-thumbnails-partial (from https://www.roblox.com/)
+00:43:03	Error: 	"Not Found" (404) at link https://www.roblox.com/thumbnail_holder/g (from https://www.roblox.com/)
+00:43:03	Error: 	"Bad Request" (400) at link https://www.roblox.com/users/{id}/profile (from https://www.roblox.com/)
+00:43:03	Error: 	"Not Found" (404) at link https://www.roblox.com/notification-stream/notification-stream-data (from https://www.roblox.com/)
+00:43:03	Error: 	"Not Found" (404) at link https://www.roblox.com/api/friends/acceptfriendrequest (from https://www.roblox.com/)
+00:43:03	Error: 	"Not Found" (404) at link https://www.roblox.com/api/friends/declinefriendrequest (from https://www.roblox.com/)
+00:43:03	Error: 	"Unauthorized" (401) at link https://www.roblox.com/authentication/is-logged-in (from https://www.roblox.com/)
+00:43:12	Error: 	"Not Found" (404) at link https://www.roblox.com/catalog/GET (from https://www.roblox.com/catalog/)
+00:43:12	Error: 	"Not Found" (404) at link https://www.roblox.com/catalog/POST (from https://www.roblox.com/catalog/)
+00:43:15	Error: 	"Not Found" (404) at link https://www.roblox.com/upgrades/GET (from https://www.roblox.com/upgrades/robux?ctx-nav)
+00:43:15	Error: 	"Not Found" (404) at link https://www.roblox.com/upgrades/POST (from https://www.roblox.com/upgrades/robux?ctx-nav)
+00:43:15	Warning: 	Retry after error -4 (No data (connection closed)) at link https://images.rbxcdn.com/e1398f8378eb7e721b3b51fc05f1f961.png (from https://www.roblox.com/Download)
+00:43:15	Warning: 	Link https://www.roblox.com/groups/6124305/The-Roman-Empire not scanned (follow robots meta tag)
+00:43:15	Error: 	"Bad Request" (400) at link https://www.roblox.com/abusereport/Asset?id=7653031390&redirectUrl=http%3A%2F%2Fwww.roblox.com%2Fcatalog%2F (from https://www.roblox.com/user-sponsorship/1)
+
+HTTrack Website Copier/3.49-2 mirror complete in 1 minutes 27 seconds : 255 links scanned, 209 files written (8869324 bytes overall) [6281646 bytes received at 72202 bytes/sec], 8309552 bytes transferred using HTTP compression in 187 files, ratio 22%, 2.9 requests per connection
+(41 errors, 4 warnings, 0 messages)
